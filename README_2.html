@@ -1,0 +1,131 @@
+﻿
+	
+	<h3>Laboratorinis darbas: Sąrašinių duomenų struktūrų kūrimas</h3>
+	
+	<div class="rd_desc rd_full">
+		<p><span class="mooblock-title mb18_1t">Darbo tikslai</span>
+</p>
+<ol>
+<li>Išmokti kurti klases, tenkinančias nurodytą sąsają;</li>
+<li>Išmokti atskirų objektų apdorojimo bendriniuose sąrašuose būdus (sukūrimas, įdėjimas, peržiūra, atranka), pasinaudojant duotos sąsajos metodais;</li>
+<li>Išmokti testavimo klasių kūrimo pradmenis;</li>
+<li>Sukurti bendravimo su vartotoju imitatorių eksperimentiniam tyrimui;</li>
+</ol>
+<span class="mooblock-title mb18_1t">Atsiskaitymas</span>
+<li>Pateikiama atlikta individuali darbo dalis ir ataskaitos elektroninė versija;</li>
+<li>Operatyviai atliekamos dėstytojo nurodytos užduotys:<br>- modifikuoti individualią klasę;<br>- sukurti ar modifikuoti apdorojimo metodus;</li>
+<li>Atsakoma į klausimus apie <strong>studijosKTU </strong>paketo klasių struktūrą ir metodus.</li>
+</ol>
+<p><span style="text-decoration: underline;"><strong>Darbo eiga</strong></span><br><br><em>Duota:</em> du paketai <strong>studijosKTU </strong>(su atskiru aprašymu) ir <strong>Labor2</strong>, kuriuose yra pateiktos toliau naudojamos sisteminės klasės ir demo variantas laboratorinio darbo vykdymui.</p>
+<p><em>Reikia sukurti:</em> naują paketą <strong>Lab2Pavarde</strong> su klasėmis individualioms užduotims spręsti.</p>
+<p><em>Tyrimo ir analizės dalis:</em></p>
+<ol>
+<li>Išnagrinėti klasės <strong>ValdymoModulis </strong>pradinį metodą <strong>main</strong>, kuriame komentarų pagalba reikia aktyvuoti tiriamus metodus;</li>
+<li>Išnagrinėti sisteminės klasės <strong>Ks </strong>metodus, panaudojant klasę <strong>DemoKTUsystem</strong>. Bandydami demo variantus iššaukite <span style="text-decoration: underline;">klaidų situacijas</span>, parašykite naujus demo metodus;</li>
+<li>Išnagrinėti elemento klasės <strong>Automobilis </strong>struktūrą, išbandyti jo metodus, panaudojant klasę <strong>AutomobiliųTestai</strong>;</li>
+<li>Išbandyti klasių <strong>ListKTU </strong>ir <strong>ListKTUx </strong>metodus, ištirti sąrašo metodų sąveiką su <strong>DataKTU </strong>tipo elementais; tiriama klasių <strong>AutomobiliųTestai </strong>ir <strong>AutomobiliuApskaita </strong>struktūra;</li>
+</ol>
+<p><em>Individuali klasių konstravimo dalis:</em></p>
+<ol>
+<li>Pagal duotą <strong>Automobilio </strong>klasės pavyzdį sukurti individualiai pasirinkto objekto klasės (4 ir daugiau objekto charakteristikos, laukų tipai būtinai skirtingi nuo Automobilio), tenkinančias <strong>DataKTU</strong> interfeisą; programinį kodą rašyti į individualų paketą <strong>Lab2Pavarde</strong>.</li>
+<li>Patikrinti individualios klasės veikimą testo klasės pagalba;</li>
+<li>Sudaryti individualių elementų apskaitos klasę, kurioje būtų elementų peržiūra ir jų atranka pagal įvairius kriterijus;</li>
+<li>Sudaryti elementų apskaitos klasės testus;</li>
+<li>Išnagrinėti klasės <strong>ValdymoModulis </strong>metodą <strong>bendravimasSuKlientu </strong>ir jį pritaikyti individualios klasės duomenų apdorojimui;</li>
+<li>Realizuoti papildomus ListKTU metodus <strong>add(int k, Data data)</strong>, <strong>set(int k, Data data)</strong>, <strong>remove(int k)</strong>; sukurti metodus sąrašų prijungimui, bendrų elementų radimui;</li>
+</ol>
+<p>Individualiai pasirenkamų duomenų tipai yra suderinami su laboratorinių darbų dėstytoju, galimi pavyzdžiai:</p>
+<p>prekės iš didmeninės ir mažmeninės prekybos asortimento, elektronikos komponentai, kompiuteriai, knygos, multimedijos kūriniai, kelionės, sporto varžybų ir dalyvių duomenys ir kitokie elementai, turintys po 4 ir daugiau juos apibūdinančias charakteristikas.</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><strong>Paketo <span style="text-decoration: underline;">studijosKTU </span>aprašymas</strong></p>
+<p>Pakete <strong>studijosKTU </strong>yra pateikiamos klasės <strong>Ks</strong>, <strong>ListKTU</strong> ir <strong>ListKTUx</strong> bei sąsajos <strong>DataKTU </strong>ir <strong>ListADT</strong>.</p>
+<p>Klasė <strong>Ks </strong>(santrumpa nuo <strong>KTUsystem</strong>) sukurta kaip dalinis Javos klasės <strong>System </strong>pakeitimas, siekiant supaprastinti duomenų įvedimo-išvedimo programavimą laboratorinių darbų metu.</p>
+<p>Joje yra metodų <strong>Ks.giveString</strong>, <strong>Ks.giveInt</strong>, <strong>Ks.giveDouble</strong>, <strong>Ks.giveLong</strong>,&nbsp; ... rinkinys, skirtas dialogo duomenų paėmimui iš klaviatūros. Vartotojui nereikia rūpintis formatų kontrole, išimčių apdorojimu. Kelių metodų programavimas paliktas savarankiškam darbui.</p>
+<p>Metodų, skirtų informacijos išvedimui į output ir error srautus, paskirtis nurodoma taip:</p>
+<table border="0">
+<tbody>
+<tr>
+<td>Ks.<strong>ou</strong> atitinka: System.<strong>ou</strong>t.print&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></td>
+<td>Ks.<strong>er</strong> atitinka: System.<strong>er</strong>r.print</td>
+</tr>
+<tr>
+<td>Ks.<strong>oun</strong> atitinka: System.<strong>ou</strong>t.printl<strong>n</strong></td>
+<td>Ks.<strong>ern</strong> atitinka: System.<strong>er</strong>r.printl<strong>n</strong></td>
+</tr>
+<tr>
+<td>Ks.<strong>ouf</strong> atitinka: System.<strong>ou</strong>t.print<strong>f</strong></td>
+<td>Ks.<strong>erf</strong> atitinka: System.<strong>er</strong>r.print<strong>f</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Pavadinimai parenkami trumpi, kadangi jų pagalba atvaizduojama informacija turi būti pakankamai išsami.</p>
+<p>Klasės <strong>ListKTU </strong>metodai apibrėžiami interfeisu (sąsaja) <strong>ListADT </strong>ir sudaro vieną iš galimų minimalių branduolių sąrašų kūrimui. Sąsajos metodų pasirinkimas argumentuojamas tokia lentele.</p>
+<table border="0">
+<tbody>
+<tr>
+<td><strong>KTU pirmas kursas</strong></td>
+<td><strong>Paketas studijosKTU</strong></td>
+<td><strong>Paketas java.util</strong></td>
+</tr>
+<tr>
+<td>void Pradzia();</td>
+<td>boolean&nbsp; add(Data data)</td>
+<td>boolean&nbsp; add(E e)</td>
+</tr>
+<tr>
+<td>void Sekantis();</td>
+<td>boolean&nbsp; add(int k, Data data)&nbsp;&nbsp;&nbsp;&nbsp; <br></td>
+<td>void&nbsp; add(int index, E element)</td>
+</tr>
+<tr>
+<td>bool Pabaiga();</td>
+<td>Data&nbsp; get(int k)</td>
+<td>E&nbsp; get(int index)</td>
+</tr>
+<tr>
+<td>int ImtiDuomenis();</td>
+<td>Data&nbsp; getNext()</td>
+<td><em>- atitinka iteratoriaus metodas</em></td>
+</tr>
+<tr>
+<td>void DetiDuomenis(int x);&nbsp;&nbsp;&nbsp;&nbsp; <br></td>
+<td>Data&nbsp; set(int k, Data d)</td>
+<td>E&nbsp; set(int index, E element)</td>
+</tr>
+<tr>
+<td>void DetiIPradzia(int x);</td>
+<td>Data&nbsp; remove(int k)</td>
+<td>E&nbsp; remove(int index)</td>
+</tr>
+<tr>
+<td>void DetiIPabaiga(int x);</td>
+<td>void&nbsp; clear()</td>
+<td>void&nbsp; clear()</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>boolean&nbsp; isEmpty()</td>
+<td>boolean isEmpty()</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>int&nbsp; size()</td>
+<td>int&nbsp; size()</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>nėra&nbsp; <em>atitinka </em>Data&nbsp; get(0)</td>
+<td>E&nbsp; getFirst()</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>nėra&nbsp; <em>atitinka </em>Data&nbsp; get(size())</td>
+<td>E&nbsp; getLast()</td>
+</tr>
+</tbody>
+</table>
+<p>KTU pirmo kurso sąsaja skirta pradiniam mokymuisi ir su žinomais standartais nesiderina. Mūsų pasirinktoje sąsajoje yra reikalaujama, kad į sąrašą būtų dedami tik nenuliniai objektai. Todėl naudojamasi galimybe, metodu getNext() gavus nulinį objektą, fiksuoti iteracijos pabaigą (kol kas tai bus naudojama kaip supaprastintas iteratorius).</p>
+<p>Klasė <strong>ListKTU </strong>realizuoja interfeisą <strong>ListADT</strong>, realizacijos ypatybės aptariamos paskaitoje.</p>
+<p>Klasė <strong>ListKTUx </strong>(extented) yra sukurta įvedimo-išvedimo metodų realizavimui, o taip pat sąrašo formavimui, kai nauji objektai formuojami metodu <strong>add(String data)</strong>. Į ją galima dėti tik objektus, tenkinančius interfeisą <strong>DataKTU</strong>, kurio ypatybės yra metodai:</p>
+<p>DataKTU <strong>create</strong>(String dataString);&nbsp; // sukuria naują objektą iš eilutės<br>String <strong>validate</strong>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; // patikrina objekto reikšmes<br>void <strong>fromString</strong>(String e);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; // suformuoja&nbsp; reikšmes iš eilutės</p>
+<p>Paketas <strong>studijosKTU </strong>yra mokomasis, studentams suteikiama teisė juo naudotis laisvai, be jokių apribojimų</p>
